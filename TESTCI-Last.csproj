@@ -1,86 +1,88 @@
-<ns0:Project xmlns:ns0="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
-  <ns0:Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <ns0:PropertyGroup>
-    <ns0:Configuration Condition=" '$(Configuration)' == '' ">Debug</ns0:Configuration>
-    <ns0:Platform Condition=" '$(Platform)' == '' ">AnyCPU</ns0:Platform>
-    <ns0:ProjectGuid>{A8B21935-BFEB-469D-9D9D-67C5838F3146}</ns0:ProjectGuid>
-    <ns0:OutputType>WinExe</ns0:OutputType>
-    <ns0:RootNamespace>TESTCI_Last</ns0:RootNamespace>
-    <ns0:AssemblyName>TESTCI-Last</ns0:AssemblyName>
-    <ns0:TargetFrameworkVersion>v4.8.1</ns0:TargetFrameworkVersion>
-    <ns0:FileAlignment>512</ns0:FileAlignment>
-    <ns0:AutoGenerateBindingRedirects>true</ns0:AutoGenerateBindingRedirects>
-    <ns0:Deterministic>true</ns0:Deterministic>
-  <RuntimeIdentifier>win-x64</RuntimeIdentifier></ns0:PropertyGroup>
-  <ns0:PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <ns0:PlatformTarget>AnyCPU</ns0:PlatformTarget>
-    <ns0:DebugSymbols>true</ns0:DebugSymbols>
-    <ns0:DebugType>full</ns0:DebugType>
-    <ns0:Optimize>false</ns0:Optimize>
-    <ns0:OutputPath>bin\Debug\</ns0:OutputPath>
-    <ns0:DefineConstants>DEBUG;TRACE</ns0:DefineConstants>
-    <ns0:ErrorReport>prompt</ns0:ErrorReport>
-    <ns0:WarningLevel>4</ns0:WarningLevel>
-  <RuntimeIdentifier>win-x64</RuntimeIdentifier></ns0:PropertyGroup>
-  <ns0:PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <ns0:PlatformTarget>AnyCPU</ns0:PlatformTarget>
-    <ns0:DebugType>pdbonly</ns0:DebugType>
-    <ns0:Optimize>true</ns0:Optimize>
-    <ns0:OutputPath>bin\Release\</ns0:OutputPath>
-    <ns0:DefineConstants>TRACE</ns0:DefineConstants>
-    <ns0:ErrorReport>prompt</ns0:ErrorReport>
-    <ns0:WarningLevel>4</ns0:WarningLevel>
-  <RuntimeIdentifier>win-x64</RuntimeIdentifier></ns0:PropertyGroup>
-  <ns0:ItemGroup>
-    <ns0:Reference Include="MathNet.Numerics, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <ns0:HintPath>packages\MathNet.Numerics.6.0.0-beta1\lib\net48\MathNet.Numerics.dll</ns0:HintPath>
-    </ns0:Reference>
-    <ns0:Reference Include="System" />
-    <ns0:Reference Include="System.Core" />
-    <ns0:Reference Include="System.Xml.Linq" />
-    <ns0:Reference Include="System.Data.DataSetExtensions" />
-    <ns0:Reference Include="Microsoft.CSharp" />
-    <ns0:Reference Include="System.Data" />
-    <ns0:Reference Include="System.Deployment" />
-    <ns0:Reference Include="System.Drawing" />
-    <ns0:Reference Include="System.Net.Http" />
-    <ns0:Reference Include="System.Windows.Forms" />
-    <ns0:Reference Include="System.Xml" />
-  </ns0:ItemGroup>
-  <ns0:ItemGroup>
-    <ns0:Compile Include="Form1.cs">
-      <ns0:SubType>Form</ns0:SubType>
-    </ns0:Compile>
-    <ns0:Compile Include="Form1.Designer.cs">
-      <ns0:DependentUpon>Form1.cs</ns0:DependentUpon>
-    </ns0:Compile>
-    <ns0:Compile Include="Program.cs" />
-    <ns0:Compile Include="Properties\AssemblyInfo.cs" />
-    <ns0:EmbeddedResource Include="Form1.resx">
-      <ns0:DependentUpon>Form1.cs</ns0:DependentUpon>
-    </ns0:EmbeddedResource>
-    <ns0:EmbeddedResource Include="Properties\Resources.resx">
-      <ns0:Generator>ResXFileCodeGenerator</ns0:Generator>
-      <ns0:LastGenOutput>Resources.Designer.cs</ns0:LastGenOutput>
-      <ns0:SubType>Designer</ns0:SubType>
-    </ns0:EmbeddedResource>
-    <ns0:Compile Include="Properties\Resources.Designer.cs">
-      <ns0:AutoGen>True</ns0:AutoGen>
-      <ns0:DependentUpon>Resources.resx</ns0:DependentUpon>
-    </ns0:Compile>
-    <ns0:None Include="packages.config" />
-    <ns0:None Include="Properties\Settings.settings">
-      <ns0:Generator>SettingsSingleFileGenerator</ns0:Generator>
-      <ns0:LastGenOutput>Settings.Designer.cs</ns0:LastGenOutput>
-    </ns0:None>
-    <ns0:Compile Include="Properties\Settings.Designer.cs">
-      <ns0:AutoGen>True</ns0:AutoGen>
-      <ns0:DependentUpon>Settings.settings</ns0:DependentUpon>
-      <ns0:DesignTimeSharedInput>True</ns0:DesignTimeSharedInput>
-    </ns0:Compile>
-  </ns0:ItemGroup>
-  <ns0:ItemGroup>
-    <ns0:None Include="App.config" />
-  </ns0:ItemGroup>
-  <ns0:Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</ns0:Project>
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4A57831-7CC5-4CF7-8171-64A0B5CA26BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LASTCI</RootNamespace>
+    <AssemblyName>LASTCI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MathNet.Numerics.6.0.0-beta1\lib\netstandard2.0\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
